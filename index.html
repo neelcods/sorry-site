@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>sorry — 6-page portrait site (9:16)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#ff6b6b;
+      --muted:#9aa4b2;
+      --glass: rgba(255,255,255,0.06);
+      font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#071225 0%, #071827 100%);display:flex;align-items:center;justify-content:center}
+    .frame{width:min(420px, 48vh); aspect-ratio:9/16; background:linear-gradient(180deg,#081426 0%, #071827 100%); border-radius:28px;box-shadow:0 20px 50px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02); overflow:hidden;position:relative;display:flex;flex-direction:column;}
+    .viewport{flex:1;display:flex;flex-direction:column;position:relative}
+    .pages{height:100%;width:100%;position:relative}
+    .page{position:absolute;inset:0;display:grid;place-items:center;padding:28px;transition:transform .6s cubic-bezier(.2,.9,.3,1),opacity .4s;transform:translateY(100%);opacity:0}
+    .page.active{transform:translateY(0);opacity:1}
+    .card{width:100%;height:100%;border-radius:18px;background-color:rgba(8,12,20,0.6);backdrop-filter:blur(6px);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;background-image: linear-gradient(rgba(8,12,20,0.55), rgba(8,12,20,0.55)), url('3.gif');background-size:cover;background-repeat:no-repeat;background-position:center}
+    h1,p,.reason,.photo-text,.btn,.big-cta{text-transform:lowercase}
+    h1{margin:0;font-size:1.6rem;color:white;text-align:center}
+    p{color:var(--muted);text-align:center;margin:12px 0 0;font-size:0.95rem;line-height:1.3}
+
+    .photo{width:88%;height:55%;border-radius:16px;background:transparent;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:0.95rem;position:relative;overflow:hidden}
+    .photo img{width:100%;height:100%;object-fit:cover;border-radius:12px;display:block}
+
+    .nav{position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:space-between;padding:0 14px;align-items:center;z-index:60}
+    .dots{display:flex;gap:8px}
+    .dot{width:8px;height:8px;border-radius:8px;background:rgba(255,255,255,0.18)}
+    .dot.active{background:var(--accent);width:28px;border-radius:10px;height:8}
+    .btn{background:var(--glass);border:0;padding:10px 14px;border-radius:999px;color:var(--muted);font-weight:600}
+
+    .reason-list{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+    .reason{background:rgba(255,255,255,0.02);padding:8px 12px;border-radius:10px;color:var(--muted);font-size:0.9rem}
+    .big-cta{margin-top:16px;padding:12px 20px;border-radius:14px;background:linear-gradient(90deg,var(--accent),#ff8a8a);color:white;border:0;font-weight:700}
+
+    @media (max-width:420px){.frame{width:92vw}}
+    #p2 .photo{width:100%;height:65%;border-radius:16px}
+    #p2 .photo img{object-fit:cover}
+    #p2 .photo-text{margin-top:12px;color:white;font-size:0.78rem;text-align:center;line-height:1.25;padding:6px 6px;background:rgba(0,0,0,0.45);border-radius:8px;backdrop-filter:blur(4px);position:relative;z-index:5}
+  </style>
+</head>
+<body>
+  <div class="frame" role="application" aria-label="sorry site - swipe or use navigation">
+    <div class="viewport">
+      <div class="pages" id="pages">
+        <!-- full content preserved -->
+        <!-- page 1 -->
+        <section class="page active" data-index="0" id="p0">
+          <div class="card">
+            <h1>heyyyyyy babuuu welcum back❤️</h1>
+            <p>ik tu thak gayi hogi 5 ghante ki flight + travelling + jetlag + chalna + seats uncomfortable ohh myy godsss</p>
+            <div style="height:35px"></div>
+            <div class="photo" data-page="0">
+              <img src="assets/5.gif" alt="page-0-gif">
+            </div>
+          </div>
+        </section>
+
+        <!-- the remaining pages (2–7) included unchanged -->
+        <!-- page 2 -->
+        <section class="page" data-index="1" id="p1">
+          <div class="card">
+            <h1>goodmorningss babyyyy❤️</h1>
+            <p>now that you have woke up</p>
+            <div class="reason-list">
+              <div class="reason">thank you for removing your precious time for me</div>
+              <div class="reason">ahh how good it would be if you were next to me rn</div>
+              <div class="reason">i would make that happen soon no worries</div>
+              <div class="reason">anyways heres a little something for you</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- page 3 -->
+        <section class="page" data-index="2" id="p2">
+          <div class="card">
+            <h1>like i said it earlier</h1>
+            <p>you be my every morning barista & i'll be your every night bartender & for you i would</p>
+            <div class="photo" data-page="2">
+              <img src="assets/2.png" alt="page-2-png">
+            </div>
+            <div class="photo-text">surround you with lindors, sheridans, ballentines, brases, bougainvilles, smirnoffs, absolut vodkas, jack daniels, sex on the beaches, love on the beaches, different mocktails & cocktails, mcd iced coffees, capucinoes, bacardies, breezers and god knows what all you name it and it will be presented</div>
+          </div>
+        </section>
+
+        <!-- page 4 -->
+        <section class="page" data-index="3" id="p3">
+          <div class="card">
+            <h1>iloveyouuuuu❤️</h1>
+            <p>you me or no one can prove this wrong that iloveyouuuu more than there are total numbers of planets stars and galaxies in the whole multiverse</p>
+            <div class="reason-list">
+              <div class="reason">sometimes i may be annoying, may be irritating, may be bombarding with messages, may be not meeting up as your expectations, may be down,may be up</div>
+              <div class="reason">but m working on myself, m imperfect but i would work in everyway possible tO make us perfect from my end </div>
+              <div class="reason">i do think bout you & do wanna talk to you, babygirl i am interested in you seal this in your head</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- page 5 -->
+        <section class="page" data-index="4" id="p4">
+          <div class="card">
+            <h1>analysing</h1>
+            <p>i couldnt sleep after the other night, the night after the drinking i was thinking about all those ways i could be better and speak properly so you feel heard and cared for i know you are grown up now and responsible girl the othernight about the drinking the thing i said about the overdrinking i said what i said but i should have realised that you are full grown up girl and you know your capacity i am sorry please maan jaa please please please pleaseeee</p>
+            <div style="height:16px"></div>
+            <div class="photo" data-page="4">
+              <img src="assets/12.gif" alt="page-4-gif">
+            </div>
+          </div>
+        </section>
+
+        <!-- page 6 -->
+        <section class="page" data-index="5" id="p5">
+          <div class="card">
+            <h1>will you forgive me?❤️</h1>
+            <p>i do like you, i do awww youu, i do love youuu my babu, i do care bout you, i do have interest in you, i do give fuck bout you, i do love to listen to you, i do love to know more bout you
+            and i do remember you said you wanted me to hear what going on with me, yes baby i will share everything bout me to you and only you and not just anyone so yeah babu let bygone be bygones and please maaf karde yaar please please pleaseeeeeee</p>
+            <div style="height:12px"></div>
+            <div class="photo" data-page="5">
+              <img src="assets/13.gif" alt="page-5-gif">
+            </div>
+          </div>
+        </section>
+
+        <!-- page 7 -->
+        <section class="page" data-index="6" id="p6">
+          <div class="card">
+            <h1>ipyaaryouuu a lot lot lot lottt my pinacolada❤️</h1>
+            <p></p>
+            <div style="height:35px"></div>
+            <div class="photo" data-page="6">
+              <img src="assets/14.gif" alt="page-6-gif">
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <div class="nav">
+        <button class="btn" id="prev">◀ prev</button>
+        <div class="dots" id="dots"></div>
+        <button class="btn" id="next">next ▶</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const pages = Array.from(document.querySelectorAll('.page'));
+    const dotsWrap = document.getElementById('dots');
+    let idx = 0;
+
+    function renderDots(){
+      dotsWrap.innerHTML='';
+      pages.forEach((p,i)=>{
+        const d = document.createElement('div');
+        d.className='dot'+(i===idx?' active':'');
+        d.onclick = ()=> goTo(i);
+        dotsWrap.appendChild(d);
+      })
+    }
+
+    function update(){ pages.forEach((p,i)=> p.classList.toggle('active', i===idx) ); renderDots(); }
+    function next(){ idx = Math.min(pages.length-1, idx+1); update(); }
+    function prev(){ idx = Math.max(0, idx-1); update(); }
+    function goTo(i){ idx = Math.max(0, Math.min(pages.length-1, i)); update(); }
+
+    document.getElementById('next').addEventListener('click', next);
+    document.getElementById('prev').addEventListener('click', prev);
+
+    (function(){
+      let startY = null;
+      const vp = document.querySelector('.pages');
+      vp.addEventListener('touchstart', e=> startY = e.changedTouches[0].clientY);
+      vp.addEventListener('touchend', e=>{
+        if(startY===null) return;
+        const dy = e.changedTouches[0].clientY - startY;
+        if(dy < -40) next();
+        if(dy > 40) prev();
+        startY = null;
+      })
+    })();
+
+    function redeem(){ alert('coupon redeemed — follow up in person with a date!') }
+    function sendAnswer(ok){ if(ok) alert('thank you — i love you ❤️'); else alert('i understand. i will wait and keep trying.') }
+
+    update();
+  </script>
+</body>
+</html>
